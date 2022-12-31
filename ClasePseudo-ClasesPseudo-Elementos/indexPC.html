@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Clases</title>
+    <style>
+        a:link {
+            color: palevioletred;
+        }
+        a:visited {
+            color: darkgoldenrod;
+        }
+        a:hover {
+            background-color: peachpuff;
+        }
+        p:not(.maravillas) {
+            color: lightseagreen;
+        }
+        .container div:nth-child(2) {
+            background-color: rgb(153, 229, 210);
+        }
+        .red-input:focus {
+            background-color: paleturquoise;
+            color: red;
+        }
+        .blue-input:focus {
+            background-color: palegoldenrod;
+            color: blue;
+        }
+
+        /* input:disabled {
+            background: #ccc;
+        } */
+
+        input[type="text"]:disabled {
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Alicia</a>
+    <p>En el</p>
+    <p class="maravillas">pais</p>
+    <div class="container">
+        <div>Alicia</div>
+        <div>en el</div>
+        <div>pais de las maravillas</div>
+        <div><input class="red-input" value="I'll be red when focused." ></div>
+        <div><input class="blue-input" value="I'll be blue when focused."></div>
+
+        <form action="#">
+            <fieldset id="shipping">
+              <legend>Shipping address</legend>
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Address">
+              <input type="text" placeholder="Zip Code">
+            </fieldset>
+            <br>
+            <fieldset id="billing">
+              <legend>Billing address</legend>
+              <label for="billing-checkbox">Same as shipping address:</label>
+              <input type="checkbox" id="billing-checkbox" checked>
+              <br>
+              <input type="text" placeholder="Name" disabled>
+              <input type="text" placeholder="Address" disabled>
+              <input type="text" placeholder="Zip Code" disabled>
+            </fieldset>
+          </form>
+
+    </div>
+</body>
+</html>
